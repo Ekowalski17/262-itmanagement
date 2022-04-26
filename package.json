@@ -1,0 +1,22 @@
+{
+  "name": "262-itmanagement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekowalski17/262-itmanagement.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ekowalski17/262-itmanagement/issues"
+  },
+  "homepage": "https://github.com/Ekowalski17/262-itmanagement#readme",
+  "dependencies": {
+    "mocha": "^9.2.2"
+  }
+}
