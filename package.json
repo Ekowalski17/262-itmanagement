@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Ekowalski17/262-itmanagement#readme",
   "dependencies": {
-    "mocha": "^9.2.2"
-  }
+    "mocha": "^9.2.2",
+    "node-fetch": "^3.2.4"
+
+  },
+  "type": "module"
+
 }
