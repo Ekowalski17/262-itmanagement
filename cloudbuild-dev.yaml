@@ -1,3 +1,4 @@
+#we created a yaml file: 
 #yaml is always about indentation"
 #pipeplines have steps in it.  Yaml files can be separated by dashes"
 #dashes are like bullets in a list"
@@ -11,6 +12,14 @@
 #1. create a file called cloudbuild-dev.yaml"
 #2. start the file with:  steps: "
 #3. to create a container image start with an indent and dash.  Look at the code below.  
+
+#git commands: 
+  #git add .
+  #git commit -m 'added a yaml file'
+  #git push -u origin main
+  #git push
+  #git remote -v
+
 
 steps: 
 #This step builds the container image
