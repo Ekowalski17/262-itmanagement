@@ -7,11 +7,23 @@
 #it will get lost.  Instead we will push it to somewhere else and save it to somewhere else than the cloud
 #We will push it to the google container registry
 #google calls your pipele as a google trigger
+#cloud build will watch your repository
 
 #How to create a file"
 #1. create a file called cloudbuild-dev.yaml"
 #2. start the file with:  steps: "
 #3. to create a container image start with an indent and dash.  Look at the code below.  
+#4. We were granted access of cloud platform.  You can find this at console.cloud.google.com
+#5. once you have gotten on the site, go to the search bar and type "cit 262"
+#6. once you have found it go to the three stack and scroll down until you see "cloud build"
+#7. once you have found cloud build, click dashboard. 
+#8. after you have found your dashboard, you need to search cloud build.  
+#9. click cloud build.  
+#10. click triggers. 
+#11. fill out the information: 
+    #name:  'Your name'
+
+#talk to him from there on out
 
 #git commands: 
   #git add .
@@ -35,4 +47,5 @@ steps:
     args: 
       - "push"
       - "gcr.io/$PROJECT_ID/stedi-tests-elizabeth: latest"
+     
 
