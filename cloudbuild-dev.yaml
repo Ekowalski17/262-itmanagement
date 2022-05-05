@@ -1,0 +1,29 @@
+#yaml is always about indentation"
+#pipeplines have steps in it.  Yaml files can be separated by dashes"
+#dashes are like bullets in a list"
+#Every step uses a docker image.  We are using a docker image to build a docker image"
+#When you are in the cloud, storage is different.  Cloud build does not retrieve previous files.  
+#it will get lost.  Instead we will push it to somewhere else and save it to somewhere else than the cloud
+#We will push it to the google container registry
+#google calls your pipele as a google trigger
+
+#How to create a file"
+#1. create a file called cloudbuild-dev.yaml"
+#2. start the file with:  steps: "
+#3. to create a container image start with an indent and dash.  Look at the code below.  
+
+steps: 
+#This step builds the container image
+  - name: "gcr.io/cloud-builders/docker"
+    id: Build
+    args:
+      - "build"
+      - "-t"
+      - "gcr.io/$PROJECT_ID/stedi-tests-elizabeth: latest"
+      - "."
+  - name: "gcr.io/cloud-builders/docker"
+    id: Push
+    args: 
+      - "push"
+      - "gcr.io/$PROJECT_ID/stedi-tests-elizabeth: latest"
+
