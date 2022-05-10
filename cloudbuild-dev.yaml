@@ -47,5 +47,10 @@ steps:
     args: 
       - "push"
       - "gcr.io/$PROJECT_ID/stedi-tests-elizabeth: latest"
-     
+  - name: "gcr.io/cloud-builders/docker"
+    id: Run
+    args:
+      - "run"
+      - "gcr.io/$PROJECT_ID/stedi-tests-elizabeth: latest"
+
 
