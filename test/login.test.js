@@ -1,4 +1,5 @@
 import {login} from "../utils/login.js";
+
 it('Should get login token', async ()=> {
     const loginRequest = {
         userName: "cupcakes123@gmail.com",
