@@ -1,11 +1,10 @@
-#© 2021 Sean Murdock
 
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata:
   name: elizabeth-stedi
 spec:
-  replicas: 1
+  replicas: 1 #this is how many pods you will have
   selector:
     matchLabels:
       app: elizabeth-stedi
@@ -16,7 +15,8 @@ spec:
     spec:
       containers:
         - name: elizabeth-stedi
-          image: "gcr.io/$PROJECT_ID/stedi-tests-elizabeth:latest"
+          image: "gcr.io/teca-350016/stedi-elizabeth:latest" 
+          #you can get your project id in the google cloud
           ports:
             - containerPort: 3000
           resources:
