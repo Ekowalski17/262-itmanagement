@@ -17,6 +17,8 @@ spec:
         - name: elizabeth-stedi
           image: "gcr.io/teca-350016/stedi-elizabeth:latest" 
           #you can get your project id in the google cloud
+          command: ["npm"]
+          args: ["run", "start"]
           ports:
             - containerPort: 3000
           resources:
