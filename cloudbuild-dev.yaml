@@ -51,11 +51,12 @@ steps:
     id: Deploy 
     args:
       - run
-      - --file=manifest.yaml
+      - --filename=manifest.yaml
       - --image="gcr.io/$PROJECT_ID/stedi-elizabeth:latest"
       - --location=us-east1-c
       - --output=/tmp/outputdev
       - --cluster=cluster-2
+
   - name: "gcr.io/cloud-builders/docker"
     id: Run
     args:
