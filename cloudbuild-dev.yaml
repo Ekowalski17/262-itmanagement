@@ -47,7 +47,7 @@ steps:
     args: 
       - "push"
       - "gcr.io/$PROJECT_ID/stedi-elizabeth:latest"
-  - name: "gcr.io/cloud-builders/docker"
+  - name: "gcr.io/cloud-builders/gke-deploy"
     id: Deploy 
     args:
       - run
