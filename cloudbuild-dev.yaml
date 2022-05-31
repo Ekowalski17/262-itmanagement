@@ -52,7 +52,7 @@ steps:
     args:
       - run
       - --filename=manifest.yaml
-      - --image="gcr.io/$PROJECT_ID/stedi-elizabeth:latest"
+      - --image=gcr.io/$PROJECT_ID/stedi-elizabeth:latest
       - --location=us-east1-c
       - --output=/tmp/outputdev
       - --cluster=cluster-2
