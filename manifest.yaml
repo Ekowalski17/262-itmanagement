@@ -20,7 +20,7 @@ spec:
           command: ["npm"]
           args: ["run","start"]
           ports:
-            - containerPort: 3000
+            - containerPort: 433
           resources:
             limits:
               cpu: ".5"
@@ -31,9 +31,19 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 3000
+              port: 443
             initialDelaySeconds: 3
             periodSeconds: 3
+          readinessProbe:
+            httpsGet:
+            # This is the url to call to see if my API has started
+            path: /
+            # Tjis is teh port to use to see if any of my API has started 
+            port: 443
+            # This is teh protocol to use to check if my API has started
+            scheme: HTTPS
+          initialDelaySeconds: 3
+          periodSeconds: 3
 --- #This three - separates two documents in a yaml file
 #addding load balancers handles the web or user traffic to the K8s deployment
 apiVersion: v1
